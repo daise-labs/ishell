@@ -7,11 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/abiosoft/ishell"
+	"daiselabs.com/ishell"
+	"github.com/chzyer/readline"
 )
 
 func main() {
-	shell := ishell.New()
+	shell := ishell.NewWithConfig(&readline.Config{Prompt: "#"})
 
 	// display info.
 	shell.Println("Sample Interactive Shell")

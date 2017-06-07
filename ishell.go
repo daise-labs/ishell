@@ -68,7 +68,7 @@ func NewWithConfig(conf *readline.Config) *Shell {
 		rootCmd: &Cmd{},
 		reader: &shellReader{
 			scanner:     rl,
-			prompt:      defaultPrompt,
+			prompt:      conf.Prompt,
 			multiPrompt: defaultMultiPrompt,
 			showPrompt:  true,
 			buf:         &bytes.Buffer{},
